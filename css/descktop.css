@@ -1,0 +1,62 @@
+.sectionOne-Container .sectionOne-Text h1{
+    font-size: 7rem;
+}
+.sectionOne-Container .sectionOne-Text p{
+    font-size: 1.2rem;
+    text-align: center;
+    width: 80%;
+    margin:  0 auto;
+    margin-block:1.3rem ;
+}
+.sectionOne-Container{
+    margin-top: calc(10%);
+}
+.sectionOne-Container .sectionOne-Text{
+    position: absolute;
+    top: calc(48%);
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+}
+.ticket{
+    width: 180px;
+    height: 180px;
+    top: calc(-0%);
+    left: calc(-10%);
+}
+.section-display-two{
+    display: flex;
+    width: 100%;
+    flex-direction: row-reverse;
+    justify-content: space-around;
+    gap: 1rem;
+}
+.sectionTwo-Experience .container-SectionTwo-experience{
+    grid-template-columns: repeat(3,1fr);
+    width: 75%;
+    margin-top: 0;
+}
+.container-SectionTwo-experience article{
+    height:150px ;
+    width: auto;
+    display: flex;
+    text-align: center;
+    cursor: pointer;
+}
+
+.sectionTwo-container .sectionTwo-paragraf h2{
+    color: var(--color-white);
+    font-size: 1.7rem;
+    font-family: var(--font-bricolage);
+    width: 50%;
+    margin: 0 auto;
+    line-height: 2.5rem;
+}
+.sectionTwo-Experience .title-section-Experience{
+    font-size: 4rem;
+    width: 100%;
+}
+.sectionTwo-Experience .videoProductos {
+    width: 120%;
+    height: 98%;
+}
