@@ -178,7 +178,7 @@ window.onload = () => {
            pin: true,
            scrub: 1, 
            start: 'top 10%', 
-           end: 'bottom top',
+           end: 'bottom bottom',
        },
    }, "+=0.2"); // Asegura que esta animación inicie después de las anteriores
 
