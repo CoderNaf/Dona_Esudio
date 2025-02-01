@@ -1,5 +1,5 @@
 
-<?php include 'header.php' ?>
+<?php include './templates/header.php' ?>
    
 
     <section class="sectionOne">
@@ -120,29 +120,29 @@
                     </div>
                     <span></span>
                     <div class="">
-                        <p>Lorem, ipsum dolor.</p>
+                        <p>Lo que ofrecemos.</p>
                     </div>
                 </section>
                
                 <div class="sectionthree-skills">
                    
                     <article class="divContentSkills">
-                        <h4>Diseño Web <span></span> </h4>
+                        <h4>Diseño Web <span id="arrowSpan"></span> </h4>
                         <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Architecto tenetur porro eligendi eveniet, vero earum?</p>
                     </article>
                     
                     <article class="divContentSkills">
-                        <h4>Auditoria Seo <span></span> </h4>
+                        <h4>Auditoria Seo <span id="arrowSpan"></span> </h4>
                         <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Architecto tenetur porro eligendi eveniet, vero earum?</p>
                     </article>
                     
                     <article class="divContentSkills">
-                        <h4>Dirección Audiovisual <span></span> </h4>
+                        <h4>Dirección Audiovisual <span id="arrowSpan"></span> </h4>
                         <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Architecto tenetur porro eligendi eveniet, vero earum?</p>
                     </article>
                     
                     <article class="divContentSkills">
-                        <h4>Marketing Digital <span></span> </h4>
+                        <h4>Marketing Digital <span id="arrowSpan"></span> </h4>
                         <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Architecto tenetur porro eligendi eveniet, vero earum?</p>
                     </article>
                     
@@ -157,5 +157,5 @@
     <div class="cursor-dot"></div>
     <div class="cursor-outline"></div>
     
-<?php include 'footer.php' ?>
+<?php include './templates/footer.php' ?>
 

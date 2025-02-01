@@ -204,6 +204,35 @@ marketingDiv.addEventListener('mouseover',()=>{
     video.src = './assets/GIFT/marketing.gif'
 })
    
+const divContentSkillsSecticonThree = document.querySelectorAll('.divContentSkills');
+
+divContentSkillsSecticonThree.forEach(box => {
+    box.addEventListener('click', () => {
+        // Cierra todas las cajas que no son la clickeada
+        divContentSkillsSecticonThree.forEach(b => {
+            if (b !== box) {
+                gsap.to(b, { height: '30px', duration: 0.5 });  // Cierra otras cajas con animación
+            }
+        });
+
+        // Abre o cierra la caja clickeada
+        const currentHeight = box.clientHeight; //Esta propiedad te da la altura actual visible del contenedor
+
+        if (currentHeight === box.scrollHeight) { // devuelve la altura total del contenido del elemento, incluso si está oculto (es decir, la altura completa del contenido).
+            // Si está expandida, cierra la caja
+            gsap.to(box, { height: '30px', duration: 0.5 });
+        } else {
+            // Si está cerrada, abre la caja (establece la altura según su contenido)
+            gsap.to(box, { height: box.scrollHeight, duration: 0.5 });
+        }
+    });
+});
+
+
+
+
+
+
 }
 
 
