@@ -21,6 +21,9 @@ body{
   padding: 0;
   box-sizing: border-box;
 }
+main{
+  width: 100%;
+}
 .mainDiv{
     width: 90%;
     height: 100vh;
@@ -345,4 +348,173 @@ body{
   left: 50%;
   transform: translateX(-50%);
 }
+/* From Uiverse.io by javierBarroso */ 
+.cta {
+  position: relative;
+  margin: auto;
+  padding: 12px 18px;
+  transition: all 0.2s ease;
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+
+.cta:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 50px;
+  background: #234567;
+  width: 45px;
+  height: 45px;
+  transition: all 0.3s ease;
+  display: block;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.cta::after {
+  content: "Hover me";
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 50px;
+  background: #fff;
+  width: 9px;
+  height: 21px;
+  transition: all 0.3s ease;
+  font-family: "Ubuntu", sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  white-space: nowrap;
+  padding: 12px 18px;
+  z-index: 2;
+  color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+  text-align: left;
+}
+
+.cta span {
+  position: relative;
+  font-family: "Ubuntu", sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  color: #234567;
+}
+
+.cta svg {
+  position: relative;
+  top: 0;
+  margin-left: 10px;
+  fill: none;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke: #234567;
+  stroke-width: 2;
+  transform: translateX(-5px);
+  transition: all 0.3s ease;
+  z-index: 2;
+}
+.dashboardInitial {
+  width: 100%;
+  max-width: 1500px;
+  padding: 1rem;
+  margin: 0 auto;
+}
+.section-heroTitle {
+  display: flex;
+  justify-content: space-around;
+  font-family: var(--font-bricolage);
+  align-items: center;
+  width: 100%;
+}
+.section-heroTitle h1{
+  font-size: 2rem;
+  color: var(--95);
+}
+/* .info-tables-dates {
+}
+.sectionInfo-sectionDashboard {
+} */
+
+  /* From Uiverse.io by Wendell47 */ 
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 15px 30px;
+  height: 40px;
+  width: auto;
+  border: 0;
+  position: relative;
+  overflow: hidden;
+  border-radius: 10rem;
+  transition: all 0.02s;
+  font-weight: bold;
+  cursor: pointer;
+  color: rgb(37, 37, 37);
+  z-index: 0;
+  box-shadow: 0 0px 7px -5px rgba(0, 0, 0, 0.5);
+  font-family: var(--font-bricolage);
+}
+
+.button:hover {
+  background: rgb(193, 228, 248);
+  color: rgb(33, 0, 85);
+}
+
+.button:active {
+  transform: scale(0.97);
+}
+
+.hoverEffect {
+  position: absolute;
+  bottom: 0;
+  top: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1;
+}
+
+.hoverEffect div {
+  background: rgb(222, 0, 75);
+  background: linear-gradient(
+    90deg,
+    rgba(222, 0, 75, 1) 0%,
+    rgba(191, 70, 255, 1) 49%,
+    rgba(0, 212, 255, 1) 100%
+  );
+  border-radius: 40rem;
+  width: 10rem;
+  height: 10rem;
+  transition: 0.4s;
+  filter: blur(20px);
+  animation: effect infinite 3s linear;
+  opacity: 0.5;
+}
+
+.button:hover .hoverEffect div {
+  width: 8rem;
+  height: 8rem;
+}
+
+@keyframes effect {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+
+
 
