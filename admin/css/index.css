@@ -1,3 +1,21 @@
+:root {
+  --50: #fff8ed;
+  --100: #fef0d6;
+  --200: #fcdcac;
+  --300: #fac377;
+  --400: #f69e41;
+  --500: #f3831c;
+  --600: #ed6d14;
+  --700: #bd4f11;
+  --800: #973f15;
+  --900: #793515;
+  --95: #421908;
+  --100:#641bde;
+  --font-bricolage:"Bricolage Grotesque", serif;
+  --font-titan:"Titan One", serif;
+  --font-dela:"Dela Gothic One", serif;
+}
+
 body{
   margin: 0;
   padding: 0;
@@ -228,13 +246,28 @@ body{
   align-items: center;
   justify-content: flex-end;
   padding-right:2rem;
-  background-color: #0C0F14;
+  background-color: transparent;
+}
+.sectionHeader{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.sectionHeader figure{
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  margin: 0;
+  margin-left: 1rem;
+}
+.sectionHeader figure img{
+  width: 100%;
 }
 .nav h3{
-  font-family:system-ui;
+  font-family:var(--font-bricolage);
   font-weight: 800;
-  font-family: 1.2rem;
-  color: #D07842;
+  font-family: 1rem;
+  color: var(--95);
 }
 .menuContent{
   display: flex;
@@ -246,21 +279,16 @@ body{
 }
 .menuContent a{
   text-decoration: none;
-  color: var(--main-color);
+  color: var(--500);
 }
 
 
 .menu {
-  --col-orange: #d17842;
-  --col-dark: #0c0f14;
-  --col-darkGray: #52555a;
-  --col-gray: #aeaeae;
-
   width: fit-content;
   display: flex;
   align-items: center;
   justify-content: space-evenly;
-  background-color: var(--col-dark);
+  background-color: var(--200);
   border-radius: 30px;
 }
 .label {
@@ -274,12 +302,12 @@ body{
 }
 .label > svg {
   transition: all 200ms;
-  fill: var(--col-gray);
+  fill: var(--600);
   width: 14px;
   cursor: pointer;
 }
 .label:hover:not(:has(input:checked)) > svg {
-  fill: #d17842;
+  fill: var(--600);
   opacity: 0.6;
 }
 .label::before {
@@ -291,16 +319,16 @@ body{
   position: relative;
   left: 50%;
   top: 20px;
-  background: var(--col-orange);
+  background:var(--600);
   transition: all 200ms;
 }
 .label > svg {
   transition: 300ms;
-  fill: var(--col-darkGray);
+  fill: var(--800);
   margin-top: 0;
 }
 .label:has(input:checked) > svg {
-  fill: var(--col-orange);
+  fill: var(--800);
   scale: 1.2;
   margin-top: -5px;
 }

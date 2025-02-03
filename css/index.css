@@ -465,6 +465,5 @@ header{
   .divContentSkills p{
     font-family: var(--font-bricolage);
     font-size: 1rem;
-    width: 90%;
-   
+    width: 90%;   
   }

@@ -5,6 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bienvenido</title>
     <link rel="stylesheet" href="./css/index.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&family=Dela+Gothic+One&family=Titan+One&display=swap" rel="stylesheet">
 
 </head>
 <body>
@@ -14,7 +17,12 @@
         
     <nav class="nav">
         
-        <h3>Bienvenido <?php echo 'Fabian' ?></h3>
+        <div class="sectionHeader">
+            <h3>Bienvenido <?php echo 'Fabian' ?></h3>
+            <figure>
+                <img src="../assets/img/profile.png" alt="foto de perfil">
+            </figure>
+        </div>
        
         <section class="section-menu">
             <section class="menu">
