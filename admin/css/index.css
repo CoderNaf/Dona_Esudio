@@ -436,12 +436,32 @@ main{
   font-size: 2rem;
   color: var(--95);
 }
-/* .info-tables-dates {
+.info-tables-dates {
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+  margin-top: 2rem;
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  gap: 1rem;
+  place-items: center;
 }
 .sectionInfo-sectionDashboard {
-} */
+  background: rgba(255, 255, 255, 0.7); /* Fondo semitransparente */
+  border-radius: 10px;
+  backdrop-filter: blur(10px); /* Efecto de desenfoque en el fondo */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 350px;
+  height: 150px;
+  font-family: var(--font-bricolage);
+  padding-left: 1rem;
+  border: solid 1px #D4D4D8;
+}
+.SectionDateNum{
+  font-family: var(--font-dela);
+  font-size: 2rem;
+}
 
-  /* From Uiverse.io by Wendell47 */ 
 .button {
   display: inline-flex;
   align-items: center;
@@ -456,14 +476,14 @@ main{
   transition: all 0.02s;
   font-weight: bold;
   cursor: pointer;
-  color: rgb(37, 37, 37);
+  color: var(--95);
   z-index: 0;
   box-shadow: 0 0px 7px -5px rgba(0, 0, 0, 0.5);
   font-family: var(--font-bricolage);
 }
 
 .button:hover {
-  background: rgb(193, 228, 248);
+  background: rgb(248, 226, 193);
   color: rgb(33, 0, 85);
 }
 
@@ -484,12 +504,12 @@ main{
 }
 
 .hoverEffect div {
-  background: rgb(222, 0, 75);
+  background: var(--800);
   background: linear-gradient(
     90deg,
-    rgba(222, 0, 75, 1) 0%,
-    rgba(191, 70, 255, 1) 49%,
-    rgba(0, 212, 255, 1) 100%
+    #ed6d14 5%,
+    #9d41b8 50%,
+    #3a7f3e 100%
   );
   border-radius: 40rem;
   width: 10rem;

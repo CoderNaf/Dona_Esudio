@@ -16,39 +16,39 @@
     </div>
     <section class="info-tables-dates">
         <article class="sectionInfo-sectionDashboard">
-            <h4></h4>
+            <h4>Nuevos Proyectos Este Mes</h4>
             <div>
                 <div>
                     <h5></h5>
                     <p></p>
                 </div>
-                <div>
+                <div class="SectionDateNum">
                     <p>86</p>
                 </div>
             </div>
 
         </article>
         <article class="sectionInfo-sectionDashboard">
-            <h4></h4>
+            <h4>Recapitulacion de proyectos</h4>
             <div>
                 <div>
                     <h5></h5>
                     <p></p>
                 </div>
-                <div>
+                <div class="SectionDateNum" >
                     <p>86</p>
                 </div>
             </div>
 
         </article>
         <article class="sectionInfo-sectionDashboard">
-            <h4></h4>
+            <h4>Predupuesto anual</h4>
             <div>
                 <div>
                     <h5></h5>
                     <p></p>
                 </div>
-                <div>
+                <div class="SectionDateNum" >
                     <p>86</p>
                 </div>
             </div>
