@@ -450,7 +450,7 @@ main{
   background: rgba(255, 255, 255, 0.7); /* Fondo semitransparente */
   border-radius: 10px;
   backdrop-filter: blur(10px); /* Efecto de desenfoque en el fondo */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 8px rgba(243, 131, 28, 0.2);
   width: 350px;
   height: 150px;
   font-family: var(--font-bricolage);

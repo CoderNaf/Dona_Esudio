@@ -4,7 +4,7 @@
 <section class="dashboardInitial">
     <div class="section-heroTitle">
         <h1>
-            proyect management
+            Gestión de Proyectos
         </h1>
         <button class="button">
             ➕ Nuevo Proyecto

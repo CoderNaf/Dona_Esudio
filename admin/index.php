@@ -1,22 +1,18 @@
-
-<?php
-    $userName = "";
-    $contraseña = "";
-
-if ($_POST) {
-    // Recupera los datos del formulario
-    $userName = $_POST['username'];
-    $contraseña = $_POST['password'];
-
-    if (empty($userName) || empty($contraseña)) {
-        $error_message = "Por favor, ingresa ambos campos.";
-    }
-    // Comprobamos si los datos de usuario y contraseña son incorrectos
-    if (empty($userName != 'Fabian Dev')  || empty($contraseña != '3312') ) {
-        $error_message = "El usuario y la contraseña son incorrectos.";
+<?php 
+session_start();
+if($_POST){
+    if(($_POST['username']=="Fabian Dev") && ($_POST['password']=="3312")){ // esta es una de las maneras de validar sin bases de datos relacionales, pero llamando a las bases de datos no relacionales, puede funcionar de manera mas segura ya que llamariamos a la base en formato json, con firebase, mogodb o node.
+        $_SESSION['username']="Fabian Silva";
+        header("location:inicio.php"); //esta funcion redirecciona a la persona a donde quiero que se redireccione
+    }else{
+        echo "<script> alert('usuario o contraseña incorrecto') </script>";
     }
 }
+
+
 ?>
+
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -33,15 +29,6 @@ if ($_POST) {
     
 <main class="mainDiv">
         
-    <?php if ($userName == 'Fabian Dev' && $contraseña == '3312'): ?>
-        <h1 class="h1">Bienvenido</h1>
-    <?php endif; ?>
-
-    <?php if (isset($error_message)): ?>
-        <p class="h1"><?php echo $error_message; ?></p>
-    <?php endif; ?>
-
-
 
     <div class="wrapper">
             <div class="card-switch">
@@ -55,7 +42,7 @@ if ($_POST) {
                         <form class="flip-card__form" action="index.php" method="post">
                             <input class="flip-card__input" name="username" placeholder="Username o Dirección de correo" type="text">
                             <input class="flip-card__input" name="password" placeholder="Contraseña" type="password">
-                            <button class="flip-card__btn">Ingresar!</button>
+                            <button class="flip-card__btn" type="submit">Ingresar!</button>
                         </form>
                     </div>
                     <div class="flip-card__back">

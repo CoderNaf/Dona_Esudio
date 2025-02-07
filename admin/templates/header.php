@@ -1,3 +1,15 @@
+<?php
+// Inicia una nueva sesión o reanuda la sesión existente
+session_start(); 
+
+// Verifica si la variable de sesión 'usuario' está definida y su valor no es 'Fabian Dev'
+// Si el valor de la sesión no coincide con 'Fabian Dev', redirige a 'index.php'
+if(isset($_SESSION['username']) != 'Fabian Dev') { 
+    // Redirige al usuario a la página 'index.php' si no está autenticado como 'Fabian Dev'
+    header('location:index.php');
+}
+?>
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -13,6 +25,7 @@
 <body>
 
 <section>
+    
     <div>
         
     <nav class="nav">
@@ -22,6 +35,7 @@
             <figure>
                 <img src="../assets/img/profile.png" alt="foto de perfil">
             </figure>
+            <a href="<?php echo './templates/cerrar.php' ?> ">cerrar</a>
         </div>
        
         <section class="section-menu">
