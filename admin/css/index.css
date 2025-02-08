@@ -10,7 +10,7 @@
   --800: #973f15;
   --900: #793515;
   --95: #421908;
-  --100:#641bde;
+  --100-purple:#641bde;
   --font-bricolage:"Bricolage Grotesque", serif;
   --font-titan:"Titan One", serif;
   --font-dela:"Dela Gothic One", serif;
@@ -422,7 +422,6 @@ main{
 .dashboardInitial {
   width: 100%;
   max-width: 1500px;
-  padding: 1rem;
   margin: 0 auto;
 }
 .section-heroTitle {
@@ -535,6 +534,81 @@ main{
   }
 }
 
-
+.sectionAddProyects-container{
+  width: 100%;
+  height: 100vh;
+  background-color: #ffffffa1 ;
+  z-index: 10;
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.sectionAddProyects {
+  max-width: 1000px;
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  background-image: linear-gradient(to bottom, var(--100) 10%, #ffffff 40%);
+  border-radius: 10px;
+  box-shadow:4px 4px 16px rgb(201, 201, 201) ;
+  box-sizing: border-box;
+  z-index: 100;
+}
+.addProyects-Close {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.fileIcon {
+  display: flex;
+  width:50px ;
+  height: 50px;
+  background-color: var(--200);
+  border-radius: 50%;
+  justify-content: center;
+  align-items: center;
+}
+.fileIcon span{
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  background-image: url('../../assets/img/carpeta.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  
+}
+.close-popUp {
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  background-image: url('../../assets/img/cruz-pequena.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  cursor: pointer;
+  transition: .1s;
+}
+.close-popUp:hover{
+  transform: scale(1.1);
+  transition: .2s;
+}
+.paragraf-sectionAdd {
+  font-family: var(--font-bricolage);
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  margin: .7rem;
+}
+.paragraf-sectionAdd h3{
+  margin: 0;
+  margin-top: 1rem;
+  font-size: 1.4rem;
+}
+.paragraf-sectionAdd p{
+  margin: 0;
+  font-size: 1rem;
+}
 
 

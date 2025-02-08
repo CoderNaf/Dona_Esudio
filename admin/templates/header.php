@@ -1,10 +1,9 @@
 <?php
 // Inicia una nueva sesión o reanuda la sesión existente
 session_start(); 
-
 // Verifica si la variable de sesión 'usuario' está definida y su valor no es 'Fabian Dev'
 // Si el valor de la sesión no coincide con 'Fabian Dev', redirige a 'index.php'
-if(isset($_SESSION['username']) != 'Fabian Dev') { 
+if( isset($_SESSION['username']) != 'Fabian Dev') { 
     // Redirige al usuario a la página 'index.php' si no está autenticado como 'Fabian Dev'
     header('location:index.php');
 }
@@ -23,6 +22,31 @@ if(isset($_SESSION['username']) != 'Fabian Dev') {
 
 </head>
 <body>
+
+<section class="sectionAddProyects-container">
+        <section class="sectionAddProyects">
+            <div class="addProyects-Close">
+                
+                <div class="fileIcon">
+                    <span></span>
+                </div>
+                <span class="close-popUp"></span>
+
+
+            </div>
+            
+            <article class="paragraf-sectionAdd">
+                <h3>sube un proyecto</h3>
+                <p>Adjunte el archivo a continuación</p>
+            </article>
+            
+            <form action="">
+            
+            </form>
+
+        </section>
+    </section>
+
 
 <section>
     
