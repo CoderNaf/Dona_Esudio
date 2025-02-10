@@ -610,5 +610,32 @@ main{
   margin: 0;
   font-size: 1rem;
 }
+.sectionAdd-form-file{
+  display: flex;
+  flex-direction: column;
+  padding: .7rem;
+  border:  2px #000 dotted;
+  font-family: var(--font-bricolage);
+  border-radius: 10px;
+  cursor: pointer;
+  justify-content: center;
+  align-items: center;
+}
+.sectionAdd-form-file span{
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  background-image: url('../../assets/img/agregar-documento.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  transition: .2s;
+  margin-top: 1.5rem;
+}
 
+/* animacion para cuando se haga el hover en el siv padre del file */
 
+.animatedIconSave {
+  transform: scale(1.2);
+  transition: .2s;
+}

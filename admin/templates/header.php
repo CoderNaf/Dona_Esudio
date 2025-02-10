@@ -39,9 +39,14 @@ if( isset($_SESSION['username']) != 'Fabian Dev') {
                 <h3>sube un proyecto</h3>
                 <p>Adjunte el archivo a continuación</p>
             </article>
-            
+
             <form action="">
-            
+                <div class="sectionAdd-form-file">
+                    <span></span>
+                    <input type="file" name='archivo'>
+                    <p>arrastra un archivo aquí o haz</p>
+                    <p>click aqui pra subir un achivo</p>
+                </div>
             </form>
 
         </section>
