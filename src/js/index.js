@@ -229,10 +229,6 @@ divContentSkillsSecticonThree.forEach(box => {
 });
 
 
-
-
-
-
 }
 
 

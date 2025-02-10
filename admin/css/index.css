@@ -442,7 +442,7 @@ main{
   margin-top: 2rem;
   display: grid;
   grid-template-columns: repeat(3,1fr);
-  gap: 1rem;
+  gap: 5px;
   place-items: center;
 }
 .sectionInfo-sectionDashboard {
@@ -450,11 +450,12 @@ main{
   border-radius: 10px;
   backdrop-filter: blur(10px); /* Efecto de desenfoque en el fondo */
   box-shadow: 0 4px 8px rgba(243, 131, 28, 0.2);
-  width: 350px;
+  width: 370px;
   height: 150px;
   font-family: var(--font-bricolage);
   padding-left: 1rem;
   border: solid 1px #D4D4D8;
+  gap: .5rem;
 }
 .SectionDateNum{
   font-family: var(--font-dela);
@@ -534,6 +535,8 @@ main{
   }
 }
 
+/* section add proyects */
+
 .sectionAddProyects-container{
   width: 100%;
   height: 100vh;
@@ -543,6 +546,7 @@ main{
   display: flex;
   align-items: center;
   justify-content: center;
+  display: none;
 }
 .sectionAddProyects {
   max-width: 1000px;
@@ -620,8 +624,9 @@ main{
   cursor: pointer;
   justify-content: center;
   align-items: center;
+  gap: 0;
 }
-.sectionAdd-form-file span{
+.sectionAdd-form-file .iconFileAdd{
   display: inline-block;
   width: 30px;
   height: 30px;
@@ -630,7 +635,21 @@ main{
   background-repeat: no-repeat;
   background-size: cover;
   transition: .2s;
-  margin-top: 1.5rem;
+  margin-block: 1.5rem;
+}
+.sectionAdd-form-file p{
+  margin: 0;
+  margin-top: .7rem;
+  text-transform: capitalize;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 14px;
+}
+.sectionAdd-form-file p span{
+  color: var(--600);
+  text-align: center;
 }
 
 /* animacion para cuando se haga el hover en el siv padre del file */

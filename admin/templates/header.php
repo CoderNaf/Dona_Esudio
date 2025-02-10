@@ -30,7 +30,8 @@ if( isset($_SESSION['username']) != 'Fabian Dev') {
                 <div class="fileIcon">
                     <span></span>
                 </div>
-                <span class="close-popUp"></span>
+                <span class="close-popUp">
+                </span>
 
 
             </div>
@@ -42,10 +43,13 @@ if( isset($_SESSION['username']) != 'Fabian Dev') {
 
             <form action="">
                 <div class="sectionAdd-form-file">
-                    <span></span>
+                    <span class="iconFileAdd"></span>
                     <input type="file" name='archivo'>
-                    <p>arrastra un archivo aquí o haz</p>
-                    <p>click aqui pra subir un achivo</p>
+                    <p>arrastra un el archivo(logo) aquí <br>
+                    <span>o hazclick aqui para subirlo</span>
+                    </p>
+                    
+                    
                 </div>
             </form>
 
