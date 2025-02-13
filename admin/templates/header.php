@@ -48,9 +48,23 @@ if( isset($_SESSION['username']) != 'Fabian Dev') {
                     <p>arrastra un el archivo(logo) aquí <br>
                     <span>o hazclick aqui para subirlo</span>
                     </p>
-                    
-                    
                 </div>
+                <div class="inputsComplemets">
+                    <input type="text" placeholder="Nombre del Cliente">
+                    <input type="text" placeholder="Nombre del Proyecto">
+                    <input type="text" placeholder="observaciones">
+                    <input type="text" placeholder="status" list="status" class="status">
+                        <datalist id="status">
+                            <option value="pendiente"></option>
+                            <option value="en proceso"></option>
+                            <option value="activo"></option>
+                            <option value="completado"></option>
+                        </datalist>
+                </div>
+                <button type="submit" class="rainbow-hover">
+                    <span class="sp">Registrar proyecto</span>
+                </button>
+
             </form>
 
         </section>

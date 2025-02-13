@@ -546,7 +546,7 @@ main{
   display: flex;
   align-items: center;
   justify-content: center;
-  display: none;
+  display:none;
 }
 .sectionAddProyects {
   max-width: 1000px;
@@ -658,3 +658,77 @@ main{
   transform: scale(1.2);
   transition: .2s;
 }
+
+.inputsComplemets{
+  display: flex;
+  flex-direction: column;
+  margin-top: 10px;
+  gap: 10px;
+}
+.inputsComplemets input{
+  font-family: var(--font-bricolage);
+  font-size: 1rem;
+  padding: .5rem;
+  border-radius: 10px;
+  border: solid 1px #b1b1b1;
+  cursor: text;
+}
+
+.inputsComplemets input:hover {
+  background-color: none; /* Sin cambio de color de fondo */
+  border-color: none; /* Sin cambio en el borde */
+  outline: none; /* Elimina el contorno */
+}
+.inputsComplemets input:active,
+.inputsComplemets input:focus {
+  background-color: transparent; /* Sin cambio de color de fondo */
+  border-color: none; /* Sin cambio en el borde */
+  outline: none; /* Elimina el contorno */
+}
+
+
+
+.rainbow-hover {
+  font-size: 16px;
+  font-weight: 700;
+  color: #ff7576;
+  background-color: var(--100);
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 12px 24px;
+  position: relative;
+  line-height: 24px;
+  border-radius: 9px;
+  box-shadow: 0px 1px 2px var(--300),
+    0px 4px 16px var(--200);
+  transform-style: preserve-3d;
+  transform: scale(var(--s, 1)) perspective(600px)
+    rotateX(var(--rx, 0deg)) rotateY(var(--ry, 0deg));
+  perspective: 600px;
+  transition: transform 0.1s;
+  margin-top: 1rem;
+}
+
+.sp {
+  background: linear-gradient(
+      90deg,
+      var(--600),
+      var(--400),
+      var(--700),
+      var(--700),
+      var(--500)
+      
+    );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+  display: block;
+}
+
+.rainbow-hover:active {
+  transition: 0.3s;
+  transform: scale(0.93);
+}
+
