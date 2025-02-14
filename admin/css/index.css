@@ -731,4 +731,31 @@ main{
   transition: 0.3s;
   transform: scale(0.93);
 }
+.table-responsive{
+  max-width: 1200px;
+}
 
+.table-responsive{
+  margin: 0 auto;
+  width: 100%;
+  margin-top: 2rem;
+  font-family: var(--font-bricolage);
+  border-collapse: collapse;
+}
+    .table thead th {
+      background-color: var(--500);
+      color: var(--95);
+      text-align: center;
+      padding: 12px 15px;
+      width: 200px;
+    }
+    /* Estilo para las filas del cuerpo de la tabla */
+    .table tbody td {
+      text-align: center;
+      padding: 12px 15px;
+      border: 1px solid #ddd;
+  }
+   /* Estilo para las filas alternas (filas con fondo gris claro) */
+   .table tbody tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
