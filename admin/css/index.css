@@ -343,8 +343,8 @@ main{
 }
 
 .section-menu {
-  position: absolute;
-  bottom: 2rem;
+  position: fixed;
+  bottom: 1rem;
   left: 50%;
   transform: translateX(-50%);
 }
@@ -757,5 +757,5 @@ main{
   }
    /* Estilo para las filas alternas (filas con fondo gris claro) */
    .table tbody tr:nth-child(even) {
-    background-color: #f9f9f9;
+    background-color:var(--100) ;
 }
