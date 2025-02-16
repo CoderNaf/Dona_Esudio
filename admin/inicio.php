@@ -31,6 +31,12 @@ if($resultCountProjectsReviw){
 }
 
 
+$tableDates = connection('SELECT * FROM proyects'); // creamos una variable que contenga la consulta de la tabla proyects en donde estamos guardando todos los datos de la tabla proyects
+
+foreach ($tableDates as $key => $value) { // creamos un foreach para recorrer la variable $tableDates y guardar los datos en la variable $variable
+    $variable[] = $value;  // guardamos los datos en la variable $variable, en donde $key es el indice y $value es el valor, ejemplo: $variable[0] = $value[0], o sea, $variable[0] = $value['id']
+}
+
  ?>
 
 
@@ -111,45 +117,28 @@ if($resultCountProjectsReviw){
                 </tr>
             </thead>
             <tbody>
+                 
                 <tr class="">
-                    <td scope="row">R1C1</td>
-                    <td>R1C2</td>
-                    <td>lorem3</td>
-                    <td>R1C3</td>
-                    <td>R1C3</td>
-                    <td>R1C3</td>
-                </tr>
-                <tr class="">
-                    <td scope="row">Item</td>
-                    <td>Item</td>
-                    <td>Item</td>
-                    <td>Item</td>
-                    <td>Item</td>
-                    <td>Item</td>
-                </tr>
-                <tr class="">
-                    <td scope="row">Item</td>
-                    <td>Item</td>
-                    <td>Item</td>
-                    <td>Item</td>
-                    <td>Item</td>
-                    <td>Item</td>
-                </tr>
-                <tr class="">
-                    <td scope="row">Item</td>
-                    <td>Item</td>
-                    <td>Item</td>
-                    <td>Item</td>
-                    <td>Item</td>
-                    <td>Item</td>
-                </tr>
-                <tr class="">
-                    <td scope="row">Item</td>
-                    <td>Item</td>
-                    <td>Item</td>
-                    <td>Item</td>
-                    <td>Item</td>
-                    <td>Item</td>
+                    <td>
+                        <?php echo  $value['id_proyect']  ?>
+                    </td>
+                    <td>
+                         <img src="<?php echo htmlspecialchars($value['profile_logo']); ?>" 
+                         alt="<?php echo($value['name_company']);?>">
+                    </td>
+
+                    <td>
+                        <?php echo $value['name_company'] ?>
+                    </td>
+                    <td>
+                        <?php echo $value['name_proyect'] ?>
+                    </td>
+                    <td>
+                        <?php echo $value['updated_at'] ?>
+                    </td>
+                    <td>
+                        <?php echo $value['status'] ?>
+                    </td>
                 </tr>
                 
             </tbody>
