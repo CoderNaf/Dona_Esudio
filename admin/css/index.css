@@ -758,4 +758,12 @@ main{
    /* Estilo para las filas alternas (filas con fondo gris claro) */
    .table tbody tr:nth-child(even) {
     background-color:var(--100) ;
-}
+  }
+  /* Estilo para los logos */
+  .logoCompany {
+    display: inline-block;
+    object-fit: cover;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+  }
