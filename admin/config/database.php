@@ -27,7 +27,8 @@ function connection($query) { //creamos una función que recibe un parámetro ll
         // Si hubo un error en la consulta, puedes devolver false o gestionar el error
         return false;
     }
-
+    
+    // Devolver la conexión para poder cerrarla después
     // Cerrar la conexión después de la consulta
     $conexion->close();
 }

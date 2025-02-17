@@ -1,17 +1,28 @@
+<?php include('./config/database.php') ?>
+
+
 <?php 
 // variables de secion
-
 session_start();
 if($_POST){
-    if(($_POST['username']=="Fabian Dev") && ($_POST['password']=="3312")){ // esta es una de las maneras de validar sin bases de datos relacionales, pero llamando a las bases de datos no relacionales, puede funcionar de manera mas segura ya que llamariamos a la base en formato json, con firebase, mogodb o node.
-        
-        $_SESSION['username']="Fabian Silva";
-        
-        header("location:inicio.php"); //esta funcion redirecciona a la persona a donde quiero que se redireccione
-   
+
+
+    $username = $_POST['username']; // recupera el valor del input username
+    $password = $_POST['password'];// recupera el valor del input password
+
+    $query = "SELECT * FROM users WHERE username = '$username' AND password = '$password'"; //creamos la consulta
+
+    $result = connection($query); // ejecutamos la consulta
+
+    if($result->num_rows ===  1){ // si la consulta devuelve un resultado
+        $row = $result->fetch_assoc(); // almacenamos el resultado en la variable row el cusl es un array asociativo, y en este se guarda el resultado de la consulta
+        $_SESSION['username'] = $row['username']; // creamos una variable de secion con el valor de la columna username de la tabla users, en este caso el valor de la columna username es el valor del input username. la estuctura $_session[aqui va el nombre de la variable de secion] = $row[aqui va el nombre de la columna de la tabla]. 
+        $_session['password'] = $row['password']; // creamos una variable de secion con el valor de la columna password de la tabla users, en este caso el valor de la columna password es el valor del input password. la estuctura $_session[aqui va el nombre de la variable de secion] = $row[aqui va el nombre de la columna de la tabla]. 
+        header('location:inicio.php');
     }else{
-        echo "<script> alert('usuario o contraseña incorrecto') </script>";
+        echo "<script>alert('Usuario o contraseña incorrectos')</script>";
     }
+
 }
 
 

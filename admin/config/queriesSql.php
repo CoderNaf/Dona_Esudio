@@ -42,4 +42,6 @@ if($budget){
 }else{
     $budget = 0; // Si hubo un error en la consulta, asignamos 0
 }
+
+
  ?>

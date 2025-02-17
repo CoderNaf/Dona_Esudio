@@ -56,7 +56,7 @@
                     <p></p>
                 </div>
                 <div class="SectionDateNum" >
-                    <p>
+                    <p class="budget-price">
                         <?php echo '$ '.$budget ?>
                     </p>
                 </div>
@@ -86,7 +86,7 @@
                         <?php echo  $value['id_proyect']  ?>
                     </td>
                     <td>
-                         <img src="<?php echo htmlspecialchars($value['profile_logo']); ?>" 
+                         <img src="./assets/logosClients/logo dj esteban romero.png" 
                          alt="<?php echo($value['name_company']);?>" class="logoCompany">
                     </td>
 
