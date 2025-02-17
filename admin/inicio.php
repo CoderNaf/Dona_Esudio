@@ -18,25 +18,25 @@
     <section class="info-tables-dates">
         <article class="sectionInfo-sectionDashboard">
             <h4>Nuevos Proyectos Este Mes</h4>
-            <div>
-                <div>
-                
-                </div>
-                <div class="SectionDateNum">
+            <div class="sectionGraph-content">
+                <div class="SectionDateNum">  
                     <p> 
                         <?php echo $totalProyectos?>
                     </p>
+                </div>
+                <div class="sectionGraph">
+                    <?php if ($totalProyectos < 1) { ?>
+                        <img src="./assets/graporange.png" alt="arrow-down" class="arrow-up">
+                    <?php }elseif($totalProyectos >= 1){ ?>
+                        <img src="./assets/grapGrenn.png" alt="arrow-up" class="arrow-down">
+                    <?php } ?> 
                 </div>
             </div>
 
         </article>
         <article class="sectionInfo-sectionDashboard">
             <h4>Recapitulación de proyectos</h4>
-            <div>
-                <div>
-                    <h5></h5>
-                    <p></p>
-                </div>
+            <div class="sectionGraph-content">
                 <div class="SectionDateNum" >
                     <p> 
                         <?php 
@@ -44,20 +44,30 @@
                         ?>
                     </p>
                 </div>
+                <div class="sectionGraph">
+                    <?php if ($totalProjectsReviw < 1) { ?>
+                        <img src="./assets/graporange.png" alt="arrow-down" class="arrow-up">
+                    <?php }elseif($totalProjectsReviw >= 1){ ?>
+                        <img src="./assets/grapGrenn.png" alt="arrow-up" class="arrow-down">
+                    <?php } ?> 
+                </div>
             </div>
 
         </article>
         <article class="sectionInfo-sectionDashboard">
             <h4>Presupuesto anual</h4>
-            <div>
-                <div>
-                    <h5></h5>
-                    <p></p>
-                </div>
+            <div class="sectionGraph-content">
                 <div class="SectionDateNum" >
                     <p class="budget-price">
                         <?php echo '$ '.$budget ?>
                     </p>
+                </div>
+                <div class="sectionGraph">
+                    <?php if ($budget <= '99.000') { ?>
+                        <img src="./assets/graporange.png" alt="arrow-down" class="arrow-up">
+                    <?php }elseif($budget >= '100.000'){ ?>
+                        <img src="./assets/grapGrenn.png" alt="arrow-up" class="arrow-down">
+                    <?php } ?> 
                 </div>
             </div>
 
@@ -85,7 +95,7 @@
                         <?php echo  $value['id_proyect']  ?>
                     </td>
                     <td>
-                         <img src="./assets/logosClients/logo dj esteban romero.png" 
+                         <img src="./assets/logoclients/logo dj esteban romero.png" 
                          alt="<?php echo($value['name_company']);?>" class="logoCompany">
                     </td>
 
