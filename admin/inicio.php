@@ -20,8 +20,7 @@
             <h4>Nuevos Proyectos Este Mes</h4>
             <div>
                 <div>
-                    <h5></h5>
-                    <p></p>
+                
                 </div>
                 <div class="SectionDateNum">
                     <p> 
@@ -32,7 +31,7 @@
 
         </article>
         <article class="sectionInfo-sectionDashboard">
-            <h4>Recapitulacion de proyectos</h4>
+            <h4>Recapitulación de proyectos</h4>
             <div>
                 <div>
                     <h5></h5>
@@ -49,7 +48,7 @@
 
         </article>
         <article class="sectionInfo-sectionDashboard">
-            <h4>Predupuesto anual</h4>
+            <h4>Presupuesto anual</h4>
             <div>
                 <div>
                     <h5></h5>

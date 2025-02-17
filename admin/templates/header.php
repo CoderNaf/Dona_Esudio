@@ -1,12 +1,12 @@
 <?php
-// Inicia una nueva sesión o reanuda la sesión existente
-session_start(); 
-// Verifica si la variable de sesión 'usuario' está definida y su valor no es 'Fabian Dev'
-// Si el valor de la sesión no coincide con 'Fabian Dev', redirige a 'index.php'
-if( isset($_SESSION['username']) != 'Fabian Dev') { 
-    // Redirige al usuario a la página 'index.php' si no está autenticado como 'Fabian Dev'
-    header('location:index.php');
+// Inicia la sesión
+session_start();
+if (!isset($_SESSION['username'])) { // verifica si la variable de sesión 'username' no está definidaz, si no lo está, redirige al usuario a la página 'index.php' que es el login.
+    header('location:index.php'); // Redirige al usuario a la página 'index.php'
+    exit(); // Detiene la ejecución para evitar que siga procesando el código después de la redirección, esto es importante para evitar que se ejecute código no deseado.
 }
+
+
 ?>
 
 <!DOCTYPE html>
@@ -14,7 +14,7 @@ if( isset($_SESSION['username']) != 'Fabian Dev') {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bienvenido</title>
+    <title>Administrador | Dona-Dashboard</title>
     <link rel="stylesheet" href="./css/index.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -78,7 +78,9 @@ if( isset($_SESSION['username']) != 'Fabian Dev') {
     <nav class="nav">
         
         <div class="sectionHeader">
-            <h3>Bienvenido <?php echo 'Fabian' ?></h3>
+            <h3>
+            Hola
+            <?php echo $_SESSION['username'] ?></h3>
             <figure>
                 <img src="../assets/img/profile.png" alt="foto de perfil">
             </figure>
