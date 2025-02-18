@@ -8,11 +8,4 @@ const openPopUp = document.querySelector('.button').addEventListener('click',()=
 })
 
 const budgetPrice = document.querySelector('.budget-price')
-
-if(budgetPrice <= '10.000' ){
-    budgetPrice.style.color = 'red'
-}else if(budgetPrice <= '50.000'){
-    budgetPrice.style.color = 'yellow'
-}else{
-    budgetPrice.style.color = 'green'
-}
+budgetPrice.style.color = 'green'

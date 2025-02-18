@@ -6,21 +6,20 @@
 session_start();
 if($_POST){
 
-
     $username = $_POST['username']; // recupera el valor del input username
     $password = $_POST['password'];// recupera el valor del input password
 
+    $objectConnection = new conecction(); // creamos un objeto de la clase conecction
+
     $query = "SELECT * FROM users WHERE username = '$username' AND password = '$password'"; //creamos la consulta
+    $result = $objectConnection->consultar($query); // ejecutamos la consulta
 
-    $result = connection($query); // ejecutamos la consulta
-
-    if($result->num_rows ===  1){ // si la consulta devuelve un resultado
-        $row = $result->fetch_assoc(); // almacenamos el resultado en la variable row el cusl es un array asociativo, y en este se guarda el resultado de la consulta
-        $_SESSION['username'] = $row['username']; // creamos una variable de secion con el valor de la columna username de la tabla users, en este caso el valor de la columna username es el valor del input username. la estuctura $_session[aqui va el nombre de la variable de secion] = $row[aqui va el nombre de la columna de la tabla]. 
-        $_session['password'] = $row['password']; // creamos una variable de secion con el valor de la columna password de la tabla users, en este caso el valor de la columna password es el valor del input password. la estuctura $_session[aqui va el nombre de la variable de secion] = $row[aqui va el nombre de la columna de la tabla]. 
-        header('location:inicio.php');
+    
+    if(count($result) > 0){ // si el resultado de la consulta es mayor a 0
+        $_SESSION['username'] = $result[0]['username']; // almacenamos el username en la variable de sesión
+        header('Location: inicio.php'); // redireccionamos a la página inicio.php
     }else{
-        echo "<script>alert('Usuario o contraseña incorrectos')</script>";
+        echo "Usuario o contraseña incorrectos"; // si el resultado de la consulta es 0, mostramos un mensaje de error.
     }
 
 }

@@ -21,27 +21,7 @@
             <div class="sectionGraph-content">
                 <div class="SectionDateNum">  
                     <p> 
-                        <?php echo $totalProyectos?>
-                    </p>
-                </div>
-                <div class="sectionGraph">
-                    <?php if ($totalProyectos < 1) { ?>
-                        <img src="./assets/graporange.png" alt="arrow-down" class="arrow-up">
-                    <?php }elseif($totalProyectos >= 1){ ?>
-                        <img src="./assets/grapGrenn.png" alt="arrow-up" class="arrow-down">
-                    <?php } ?> 
-                </div>
-            </div>
-
-        </article>
-        <article class="sectionInfo-sectionDashboard">
-            <h4>Recapitulación de proyectos</h4>
-            <div class="sectionGraph-content">
-                <div class="SectionDateNum" >
-                    <p> 
-                        <?php 
-                            echo $totalProjectsReviw;
-                        ?>
+                        <?php echo $totalProjectsReviw?>
                     </p>
                 </div>
                 <div class="sectionGraph">
@@ -55,11 +35,31 @@
 
         </article>
         <article class="sectionInfo-sectionDashboard">
+            <h4>Recapitulación de proyectos</h4>
+            <div class="sectionGraph-content">
+                <div class="SectionDateNum" >
+                    <p> 
+                        <?php 
+                            echo $readproyectsAnual;
+                        ?>
+                    </p>
+                </div>
+                <div class="sectionGraph">
+                    <?php if ($readproyectsAnual < 1) { ?>
+                        <img src="./assets/graporange.png" alt="arrow-down" class="arrow-up">
+                    <?php }elseif($readproyectsAnual >= 1){ ?>
+                        <img src="./assets/grapGrenn.png" alt="arrow-up" class="arrow-down">
+                    <?php } ?> 
+                </div>
+            </div>
+
+        </article>
+        <article class="sectionInfo-sectionDashboard">
             <h4>Presupuesto anual</h4>
             <div class="sectionGraph-content">
                 <div class="SectionDateNum" >
                     <p class="budget-price">
-                        <?php echo '$ '.$budget ?>
+                        <?php echo '$ '. $budget ?>
                     </p>
                 </div>
                 <div class="sectionGraph">
@@ -90,28 +90,18 @@
             </thead>
             <tbody>
                  
-                <tr class="">
-                    <td>
-                        <?php echo  $value['id_proyect']  ?>
-                    </td>
-                    <td>
-                         <img src="./assets/logoclients/logo dj esteban romero.png" 
-                         alt="<?php echo($value['name_company']);?>" class="logoCompany">
-                    </td>
+                <?php foreach($querieProyects as $proyecto){ ?>
 
-                    <td>
-                        <?php echo $value['name_company'] ?>
-                    </td>
-                    <td>
-                        <?php echo $value['name_proyect'] ?>
-                    </td>
-                    <td>
-                        <?php echo $value['updated_at'] ?>
-                    </td>
-                    <td>
-                        <?php echo $value['status'] ?>
-                    </td>
-                </tr>
+                    <tr>
+                        <td scope="row"><?php echo $proyecto['id_proyect'] ?></td>
+                        <td><img src="./assets/img/<?php echo $proyecto['profile_logo'] ?>" alt="logo"></td>
+                        <td><?php echo $proyecto['name_company'] ?></td>
+                        <td><?php echo $proyecto['name_proyect'] ?></td>
+                        <td><?php echo $proyecto['updated_at'] ?></td>
+                        <td><?php echo $proyecto['status'] ?></td>
+                    </tr>
+
+                <?php  }  ?>
             </tbody>
         </table>
     </div>

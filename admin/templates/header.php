@@ -41,7 +41,7 @@ if (!isset($_SESSION['username'])) { // verifica si la variable de sesión 'user
                 <p>Adjunte el archivo a continuación</p>
             </article>
 
-            <form action="">
+            <form action="../../../web/admin/inicio.php" method="post"  enctype="multipart/form-data" >
                 <div class="sectionAdd-form-file">
                     <span class="iconFileAdd"></span>
                     <input type="file" name='archivo'>
@@ -50,16 +50,17 @@ if (!isset($_SESSION['username'])) { // verifica si la variable de sesión 'user
                     </p>
                 </div>
                 <div class="inputsComplemets">
-                    <input type="text" placeholder="Nombre del Cliente">
-                    <input type="text" placeholder="Nombre del Proyecto">
-                    <input type="text" placeholder="observaciones">
-                    <input type="text" placeholder="status" list="status" class="status">
-                        <datalist id="status">
-                            <option value="pendiente"></option>
-                            <option value="en proceso"></option>
-                            <option value="activo"></option>
-                            <option value="completado"></option>
-                        </datalist>
+                    <input type="text" placeholder="Nombre del Cliente" name="name_company">
+                    <input type="text" placeholder="Nombre del Proyecto" name="name_proyect">
+                    <input type="text" placeholder="observaciones" name="observation">
+                    <input type="text" placeholder="status" list="status" class="status" name="status">
+                    <datalist id="status">
+                        <option value="pendiente"></option>
+                        <option value="en proceso"></option>
+                        <option value="activo"></option>
+                        <option value="completado"></option>
+                    </datalist>
+                    <input type="number" placeholder="$" name="price_proyect">
                 </div>
                 <button type="submit" class="rainbow-hover">
                     <span class="sp">Registrar proyecto</span>
