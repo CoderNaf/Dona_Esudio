@@ -7,6 +7,7 @@
     $observation = $_POST['observation'];
     $status = $_POST['status'];
     $price = $_POST['price_proyect'];
+   
 
 
     $objectConnection= new conecction();
@@ -17,7 +18,6 @@
     $objectConnection->ejecutar($sql);
 
     
-
   }
   
 
@@ -36,7 +36,8 @@
     //proyectos anuales
     $proyectsAnual = $objectConnection->consultar("SELECT COUNT(*) as totalProjectsAnual FROM proyects WHERE updated_at BETWEEN '2025-01-01' AND '2025-12-31'"); // consulta para obtener el total de proyectos anuales, esto me devolverá un array asociativo. el between es para obtener los proyectos que se crearon entre esas fechas.
     $readproyectsAnual = $proyectsAnual[0]['totalProjectsAnual']; // obtenemos el total de proyectos anuales por medio de la posición 0 y el campo totalProjectsAnual. el 0 es la posición del array y el campo totalProjectsAnual es el campo que queremos obtener.
-    
+
+   
 
 
  ?>

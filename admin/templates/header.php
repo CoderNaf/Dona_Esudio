@@ -1,3 +1,4 @@
+<?php include('./config/database.php')  ?>
 <?php
 // Inicia la sesión
 session_start();
@@ -6,7 +7,20 @@ if (!isset($_SESSION['username'])) { // verifica si la variable de sesión 'user
     exit(); // Detiene la ejecución para evitar que siga procesando el código después de la redirección, esto es importante para evitar que se ejecute código no deseado.
 }
 
+$nameAdmin = $_SESSION['username'];
+// Consulta SQL
+$objectConnection= new conecction();
+$querieName = "SELECT name FROM users WHERE username = '$nameAdmin'";
 
+// Ejecutar la consulta (suponiendo que el método consultar lo maneja)
+$nameAdminQuerie = $objectConnection->consultar($querieName);
+$nameResult = $nameAdminQuerie[0]['name']; 
+
+$querieJob = "SELECT job_position,email FROM users WHERE username = '$nameAdmin'";
+
+$querieJopPositicion = $objectConnection->consultar($querieJob);
+$userJob = $querieJopPositicion[0]['job_position'];
+$Email = $querieJopPositicion[0]['email'];
 ?>
 
 <!DOCTYPE html>
@@ -30,7 +44,7 @@ if (!isset($_SESSION['username'])) { // verifica si la variable de sesión 'user
                 <div class="fileIcon">
                     <span></span>
                 </div>
-                <span class="close-popUp">
+                <span class="close-popUp">N
                 </span>
 
 
@@ -73,19 +87,40 @@ if (!isset($_SESSION['username'])) { // verifica si la variable de sesión 'user
 
 
 <section>
-    
     <div>
-        
     <nav class="nav">
-        
         <div class="sectionHeader">
             <h3>
             Hola
             <?php echo $_SESSION['username'] ?></h3>
-            <figure>
+            <figure class="profile-header">
                 <img src="../assets/img/profile.png" alt="foto de perfil">
+                <span class="iconMenu"></span>
             </figure>
-            <a href="<?php echo './templates/cerrar.php' ?> ">cerrar</a>
+            <div class="menuHeader">
+                <section class="dateProfile">
+                    <figure>
+                        <img src="../assets/img/profile.png" alt="foto de perfil">
+                    </figure>
+                    <div>
+                        <h5><?php echo $nameResult ?></h5>
+                        <span>
+                            <?php echo $userJob  ?>
+                        </span>
+                        <span class="email">
+                            <?php echo $Email ?>
+                            <hr>
+                        </span>
+                    </div>
+                </section>
+                <hr>
+                <menu>
+                    <a href=""><span class="home"></span>inicio</a>
+                    <a href=""><span class="profile"></span>perfil</a>
+                    <a href=""><span class="settings"></span>configuración</a>
+                    <a href="<?php echo './templates/cerrar.php' ?> "><span class="close"></span>cerrar seción</a>
+                </menu>
+            </div>
         </div>
        
         <section class="section-menu">

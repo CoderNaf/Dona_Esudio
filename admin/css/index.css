@@ -262,9 +262,11 @@ main{
   height: 40px;
   margin: 0;
   margin-left: 1rem;
+  cursor: pointer;
 }
 .sectionHeader figure img{
   width: 100%;
+
 }
 .nav h3{
   font-family:var(--font-bricolage);
@@ -792,4 +794,113 @@ main{
   width: 100%;
   object-fit: fill;
 }
- 
+
+/* menu profile del dahboard */
+
+.menuHeader {
+  position: absolute;
+  right: 1rem;
+  top: 60px; 
+  z-index: 10;
+  background-color:#ffff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  padding: 1rem;
+  width: 250px;
+}
+.dateProfile {
+  display: flex;
+  gap: 1rem;
+  align-items: start;
+  justify-content: start;
+}
+.dateProfile figure{
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  overflow: hidden;
+  display: flex;
+  margin: 0;
+  border-radius: 50%;
+}
+.dateProfile figure img{
+  width: 100%;
+  margin: 0;
+}
+.dateProfile div h5,span{
+  margin: 0;
+  font-family: var(--font-bricolage);
+  color: var(--95);
+  display: flex;
+  flex-direction: row;
+}
+.dateProfile div{
+  font-size: 1.2rem;
+}
+.dateProfile span{
+  font-size: .7rem;
+  margin-top: 4px;
+}
+.menuHeader menu{
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 0;
+}
+.menuHeader menu a{
+  display: flex;
+  gap: 5px;
+  align-items: center;
+  font-family: var(--font-bricolage);
+  color: var(--95);
+  font-family: .8rem;
+  text-decoration: none;
+  text-transform: capitalize;
+}
+
+.menuHeader a span{
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  opacity: 30%;
+  font-weight: 500;
+}
+.menuHeader a .home{
+  background-image: url('../assets/icons/home.svg');
+}
+.menuHeader a .profile{
+  background-image: url('../assets/icons/profile.svg');
+}
+.menuHeader a .settings{
+  background-image: url('../assets/icons/settings.svg');
+}
+.menuHeader a .close{
+  background-image: url('../assets/icons/leave.svg');
+}
+.profile-header{
+  position: relative;
+}
+.iconMenu{
+  position: absolute;
+  top: calc(100% - 12px);
+  left: calc(100% - 15px);
+  z-index: 10;
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+  background-image: url('../assets/icons/iconMenu.png');
+  background-position: center;
+  background-repeat: no-repeat; 
+  background-size: cover;
+  border: solid 2px #fff;
+  border-radius: 50%;
+}
+.email{
+  cursor: pointer;
+}
+.email:hover{
+  text-decoration: underline var(--95);
+}

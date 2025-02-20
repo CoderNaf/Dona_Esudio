@@ -15,8 +15,8 @@ if($_POST){
     $result = $objectConnection->consultar($query); // ejecutamos la consulta
 
     
-    if(count($result) > 0){ // si el resultado de la consulta es mayor a 0
-        $_SESSION['username'] = $result[0]['username']; // almacenamos el username en la variable de sesión
+    if(count($result) == 1){ // si el resultado de la consulta es mayor a 0
+        $_SESSION['username'] = $result[0]['username']; // almacenamos el username en la variable de sesión, en donde $result[0] es el primer registro de la consulta y ['username'] es el campo de la tabla users.
         header('Location: inicio.php'); // redireccionamos a la página inicio.php
     }else{
         echo "Usuario o contraseña incorrectos"; // si el resultado de la consulta es 0, mostramos un mensaje de error.

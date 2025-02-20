@@ -1,5 +1,4 @@
 <?php  include('./templates/header.php')  ?>
-<?php include('./config/database.php') ?>
 <?php include('./config/queriesSql.php') ?>
 
 <section class="dashboardInitial">
