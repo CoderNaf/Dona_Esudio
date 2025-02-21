@@ -14,10 +14,10 @@ include 'database.php'
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&family=Dela+Gothic+One&family=Titan+One&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="./css/index.css">
-    <link rel="stylesheet" href="./css/loaderStyle.css">
-    <link rel="stylesheet" href="./css/tablet.css" media="(min-width:750px)">
-    <link rel="stylesheet" href="./css/descktop.css" media="(min-width:1000px)">
+    <link rel="stylesheet" href="../css/index.css">
+    <link rel="stylesheet" href="../css/loaderStyle.css">
+    <link rel="stylesheet" href="../css/tablet.css" media="(min-width:750px)">
+    <link rel="stylesheet" href="../css/descktop.css" media="(min-width:1000px)">
     
 </head>
 <body class="body">
