@@ -557,7 +557,8 @@ main{
   display:none;
 }
 .sectionAddProyects {
-  max-width: 1000px;
+  width: 450px;
+  max-width: 1200px;
   display: flex;
   flex-direction: column;
   padding: 1rem;
@@ -807,6 +808,16 @@ main{
   border-radius: 10px;
   padding: 1rem;
   width: 250px;
+  border: solid 1px black;
+  display: none;
+}
+.menuHeaderOn{
+  display:inline-block ;
+}
+.rotateIcon{
+  transform: rotate(180deg);
+  transition: .2s;
+  
 }
 .dateProfile {
   display: flex;
@@ -897,6 +908,7 @@ main{
   background-size: cover;
   border: solid 2px #fff;
   border-radius: 50%;
+  transition: .2s;
 }
 .email{
   cursor: pointer;

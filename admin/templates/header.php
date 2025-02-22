@@ -44,7 +44,7 @@ $Email = $querieJopPositicion[0]['email'];
                 <div class="fileIcon">
                     <span></span>
                 </div>
-                <span class="close-popUp">N
+                <span class="close-popUp">
                 </span>
 
 
@@ -66,15 +66,16 @@ $Email = $querieJopPositicion[0]['email'];
                 <div class="inputsComplemets">
                     <input type="text" placeholder="Nombre del Cliente" name="name_company">
                     <input type="text" placeholder="Nombre del Proyecto" name="name_proyect">
-                    <input type="text" placeholder="observaciones" name="observation">
-                    <input type="text" placeholder="status" list="status" class="status" name="status">
+                    <input type="text" placeholder="Observaciones" name="observation">
+                    <input type="text" placeholder="Estatus" list="status" class="status" name="status">
                     <datalist id="status">
                         <option value="pendiente"></option>
                         <option value="en proceso"></option>
                         <option value="activo"></option>
                         <option value="completado"></option>
                     </datalist>
-                    <input type="number" placeholder="$" name="price_proyect">
+                    <input type="number" placeholder="$ Precio del proyecto" name="price_proyect">
+                    <input type="number" placeholder="Abono" name="price_pass">
                 </div>
                 <button type="submit" class="rainbow-hover">
                     <span class="sp">Registrar proyecto</span>
