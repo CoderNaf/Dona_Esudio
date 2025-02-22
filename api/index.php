@@ -7,9 +7,6 @@ include(__DIR__ . '/../templates/header.php');
 
     <section class="sectionOne">
         <Section class="sectionOne-Container">
-            <div class="figure3d">
-                <iframe src="https://my.spline.design/particles-5f550b37b107c663c24c25b5445a7c02/" frameborder="0" class="figure3d-Container" title="Agenci-digital"></iframe>
-            </div>
             <section class="sectionOne-Text">
                 <div class="sectionOne-Text-Container">
                     <span class="ticket">
