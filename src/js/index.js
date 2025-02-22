@@ -1,4 +1,3 @@
-
 const titleH1 = new SplitType('#h1',{ types: 'words,chars' })
 const paragrafHeader = new SplitType('.paragrafHeader', {types: 'words'})
 const buttonCtaExplore = document.querySelector('.exploreCta')
@@ -8,14 +7,23 @@ window.onload = () => {
     
     gsap.registerPlugin(ScrollTrigger) 
 
+    function loader(){
+        sectionLoader.style.display = 'flex';
     // Bloquear el scroll solo en el loader
-    sectionLoader.style.overflow = 'hidden';
-    sectionLoader.classList.add('loadOutStyle');
+     setTimeout(() => {
+        sectionLoader.style.overflow = 'hidden';
+        sectionLoader.classList.add('loadOutStyle');
+        setTimeout(() => {
+            // Ocultar el loader después de 2 segundos
+            sectionLoader.style.display = 'none';
+        }, 3000);
+     }, 5000);
+    }
+    loader();
+    
+     //
 
-    setTimeout(() => {
-        // Ocultar el loader después de 2 segundos
-        sectionLoader.style.display = 'none';
-    }, 2000); //
+   
 
    setTimeout(() => {
     

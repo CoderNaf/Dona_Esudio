@@ -15,7 +15,7 @@
     background-color: var(--color-black);
     z-index: 10;
     animation: 2s loaderOut;
-    display: flex;
+    display: none;
     flex-direction: column;
     align-items: center;
     justify-content: center;
@@ -69,7 +69,7 @@
     }
 }
 .loadOutStyle{
-    animation: 2.5s loadeOut forwards;
+    animation: 3s loadeOut forwards;
 }
 @keyframes loadeOut {
     0%{
