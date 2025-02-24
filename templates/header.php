@@ -11,6 +11,7 @@ include 'database.php'
     <title>Te enseñamos a posicionar tu marca en internet </title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="Aprende a posicionar tu marca, llegar a tu público objetivo, crear embudos de venta efectivos y hacer crecer tu negocio con nuestra ayuda. ¡Conviértete en un experto en marketing digital!"/>
+    <link rel="icon" href="../assets/img/iconfly.png" type="image/png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&family=Dela+Gothic+One&family=Titan+One&display=swap" rel="stylesheet">
