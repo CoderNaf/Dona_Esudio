@@ -17,14 +17,11 @@ window.onload = () => {
             // Ocultar el loader después de 2 segundos
             sectionLoader.style.display = 'none';
         }, 3000);
-     }, 5000);
+     }, 4000);
     }
     loader();
     
      //
-
-   
-
    setTimeout(() => {
     
     titleH1.chars.forEach((char, index) => {   
@@ -83,7 +80,7 @@ window.onload = () => {
         opacity: 0,
         duration:1
     })
-   }, 200);
+   }, 4390);
    
    const TexParagrafPrincipal = new SplitType('.paragrafPrincipal', { types: 'words' });
    const titleH3 = new SplitType ( '.title-section-Experience', {types : 'words,chars'  })
@@ -191,25 +188,25 @@ window.onload = () => {
    }, "+=0.2"); // Asegura que esta animación inicie después de las anteriores
 
    photoDiv.addEventListener('mouseover', ()=>{
-    video.src = './assets/GIFT/foto.gif'
+    video.src = '../assets/GIFT/foto.gif'
 })
    videoDiv.addEventListener('mouseover', ()=>{
-    video.src = './assets/GIFT/video.gif'
+    video.src = '../assets/GIFT/video.gif'
 })
 webDiv.addEventListener('mouseover',()=>{
-    video.src = './assets/GIFT/web.gif'
+    video.src = '../assets/GIFT/web.gif'
 })
 video.addEventListener('mouseover',()=>{
-    video.src = './assets/img/smile.jpg'
+    video.src = '../assets/img/smile.jpg'
 })
 brandingDiv.addEventListener('mouseover',()=>{
-    video.src = './assets/GIFT/branding.gif'
+    video.src = '../assets/GIFT/branding.gif'
 })
 seoDiv.addEventListener('mouseover',()=>{
-    video.src = './assets/GIFT/SEO.gif'
+    video.src = '../assets/GIFT/SEO.gif'
 })
 marketingDiv.addEventListener('mouseover',()=>{
-    video.src = './assets/GIFT/marketing.gif'
+    video.src = '../assets/GIFT/marketing.gif'
 })
    
 const divContentSkillsSecticonThree = document.querySelectorAll('.divContentSkills');

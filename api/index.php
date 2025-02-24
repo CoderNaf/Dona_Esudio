@@ -47,6 +47,11 @@ include(__DIR__ . '/../templates/header.php');
 
             </section>
         </Section>
+            <div class="content-button-scroll">
+                <button class="btn-scroll">
+                    <div class="scroll"> </div>
+                </button>
+            </div>
     </section>
     <section class="sectionTwo">
         <section class="sectionTwo-container">
@@ -71,7 +76,7 @@ include(__DIR__ . '/../templates/header.php');
                 <section class="section-display-two">
                     <div class="section-two-Video-content">
                         <section class="videoProductos">
-                            <img src="./assets/img/smile.jpg" class="video"></img>
+                            <img src="../assets/img/smile.jpg" class="video"></img>
                         </section>
                     </div>
                     <div class="container-SectionTwo-experience">

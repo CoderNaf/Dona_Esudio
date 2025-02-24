@@ -450,3 +450,61 @@ header{
     font-size: 1rem;
     width: 90%;   
   }
+
+
+.content-button-scroll{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    position: fixed;
+    bottom: 30px;
+    margin: 0 auto;
+    z-index: 9;
+  }
+
+    .btn-scroll {
+        width: 20px;
+        height: 35px;
+        border-radius: 30px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: transparent;
+        border: none;
+        outline: 2px solid rgb(105, 127, 255);
+        box-shadow: 0px 0px 10px rgb(105, 127, 255);
+        position: relative;
+    }
+    
+    .scroll {
+        width: 5px;
+        height: 10px;
+        border-radius: 10px;
+        background-color: rgb(105, 127, 255);
+        box-shadow: 0px 0px 10px rgb(105, 127, 255);
+        animation: scroll_4013 2s linear infinite;
+        transform: translateY(40%);
+    }
+    
+    .btn-scroll:after {
+        content: 'scroll';
+        position: absolute;
+        top: 120%;
+        color: whitesmoke;
+        text-transform: uppercase;
+        letter-spacing: 1.5px;
+        font-family: var(--font-bricolage);
+        font-size: .7rem;
+    }
+    
+    @keyframes scroll_4013 {
+        0% {
+        transform: translateY(40%);
+        }
+    
+        50% {
+        transform: translateY(90%);
+        }
+    };
