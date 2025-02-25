@@ -2,6 +2,20 @@ const titleH1 = new SplitType('#h1',{ types: 'words,chars' })
 const paragrafHeader = new SplitType('.paragrafHeader', {types: 'words'})
 const buttonCtaExplore = document.querySelector('.exploreCta')
 const sectionLoader = document.querySelector('.loaderPage')
+const TexParagrafPrincipal = new SplitType('.paragrafPrincipal', { types: 'words' });
+const titleH3 = new SplitType ( '.title-section-Experience', {types : 'words,chars'  })
+const words = TexParagrafPrincipal.words;
+const titleH3Words = titleH3.chars;
+const wordSpan = document.querySelector('.spanH2');
+const wordSpan2 = document.querySelector('.spanH22');
+const video = document.querySelector('.video');
+const photoDiv = document.querySelector('.div-Photo');
+const videoDiv = document.querySelector('.div-Video');
+const webDiv = document.querySelector('.div-Diseñoweb');
+const brandingDiv = document.querySelector('.div-branding');
+const seoDiv = document.querySelector('.div-Seo');
+const marketingDiv = document.querySelector('.div-Socialmedia');
+
 
 window.onload = () => { 
     
@@ -81,20 +95,7 @@ window.onload = () => {
         duration:1
     })
    }, 4390);
-   
-   const TexParagrafPrincipal = new SplitType('.paragrafPrincipal', { types: 'words' });
-   const titleH3 = new SplitType ( '.title-section-Experience', {types : 'words,chars'  })
-   const words = TexParagrafPrincipal.words;
-   const titleH3Words = titleH3.chars;
-   const wordSpan = document.querySelector('.spanH2');
-   const wordSpan2 = document.querySelector('.spanH22');
-   const video = document.querySelector('.video');
-   const photoDiv = document.querySelector('.div-Photo');
-   const videoDiv = document.querySelector('.div-Video');
-   const webDiv = document.querySelector('.div-Diseñoweb');
-   const brandingDiv = document.querySelector('.div-branding');
-   const seoDiv = document.querySelector('.div-Seo');
-   const marketingDiv = document.querySelector('.div-Socialmedia');
+
    
    // Timeline de GSAP
    const timeline = gsap.timeline();
@@ -231,6 +232,20 @@ divContentSkillsSecticonThree.forEach(box => {
             gsap.to(box, { height: box.scrollHeight, duration: 0.5 });
         }
     });
+});
+
+timeline.from('.sectionThree-content', {
+    y: -20,
+    opacity: 0,
+    duration: 0.7, // Más duración para hacer la animación progresiva
+    stagger: 0.1,
+    scrollTrigger: {
+        trigger: '.experience-sectionThree',
+        pin: true,
+        scrub: 1, 
+        start: 'top 20%', 
+        end: 'bottom -110%', // Ajuste aquí para terminar antes de que la sección desaparezca
+    },
 });
 
 
