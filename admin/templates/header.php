@@ -21,6 +21,7 @@ $querieJob = "SELECT job_position,email FROM users WHERE username = '$nameAdmin'
 $querieJopPositicion = $objectConnection->consultar($querieJob);
 $userJob = $querieJopPositicion[0]['job_position'];
 $Email = $querieJopPositicion[0]['email'];
+
 ?>
 
 <!DOCTYPE html>

@@ -8,13 +8,19 @@
     $status = $_POST['status'];
     $price_pass = $_POST['price_pass'];
     $price = $_POST['price_proyect'];
-   
+    $imagen=$_FILES['archivo']['name'];
+    
+
+    $imagen_temporal=$_FILES['archivo']['tmp_name'];
+
+    move_uploaded_file($imagen_temporal,'./assets/logoclients/' . $imagen);
+  
 
 
     $objectConnection= new conecction();
 
-    $sql = "INSERT INTO proyects (`name_company`, `name_proyect`,`updated_at`,`status`,`observation`,`price_proyect`,`price_pass`)
-    VALUES ('$name_company', '$name_proyect',NOW(),'$status','$observation',$price,$price_pass);";
+    $sql = "INSERT INTO proyects (`name_company`, `name_proyect`,`profile_logo`,`updated_at`,`status`,`observation`,`price_proyect`,`price_pass`)
+    VALUES ('$name_company', '$name_proyect','$imagen',NOW(),'$status','$observation',$price,$price_pass);";
 
     $objectConnection->ejecutar($sql);
 

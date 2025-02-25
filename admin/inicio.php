@@ -93,7 +93,9 @@
 
                     <tr>
                         <td scope="row"><?php echo $proyecto['id_proyect'] ?></td>
-                        <td><img src="./assets/img/<?php echo $proyecto['profile_logo'] ?>" alt="logo"></td>
+                        <td>
+                            <img src="./assets/logoclients/<?php echo $proyecto['profile_logo']?>" alt="">
+                        </td> 
                         <td><?php echo $proyecto['name_company'] ?></td>
                         <td><?php echo $proyecto['name_proyect'] ?></td>
                         <td><?php echo $proyecto['updated_at'] ?></td>

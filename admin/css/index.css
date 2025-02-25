@@ -768,14 +768,13 @@ main{
    .table tbody tr:nth-child(even) {
     background-color:var(--100) ;
   }
-  /* Estilo para los logos */
-  .logoCompany {
-    display: inline-block;
-    object-fit: cover;
-    width: 50px;
-    height: 50px;
+  .table tbody tr img{
+    width: 80px;
+    height: 80px;
     border-radius: 50%;
+    object-fit: cover;
   }
+
 
 /* grapgs */
 .sectionGraph-content {
