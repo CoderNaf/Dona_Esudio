@@ -54,6 +54,7 @@ if($_POST){
                     <div class="flip-card__front">
                         <div class="title">Inicia Seción Aquí</div>
                         <form class="flip-card__form" action="index.php" method="post">
+                            @csrf
                             <input class="flip-card__input" name="username" placeholder="Username o Email" type="text">
                             <input class="flip-card__input" name="password" placeholder="Contraseña" type="password">
                             <button class="flip-card__btn" type="submit">Ingresar!</button>

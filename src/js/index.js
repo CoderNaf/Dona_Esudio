@@ -249,6 +249,6 @@ timeline.from('.sectionThree-content', {
 });
 
 
-}
+} 
 
 
