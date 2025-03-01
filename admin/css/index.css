@@ -915,3 +915,17 @@ main{
 .email:hover{
   text-decoration: underline var(--95);
 }
+
+.SectionDateNum p{
+  display: flex;
+  flex-direction: row;
+  align-items: end;
+  gap: 5px;
+}
+
+.SectionDateNum p span{
+  font-size: 1rem;
+  font-family: var(--font-bricolage);
+  color: var(--font-color);
+  margin-bottom: 7px;
+}

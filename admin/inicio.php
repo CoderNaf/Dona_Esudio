@@ -1,5 +1,16 @@
 <?php  include('./templates/header.php')  ?>
 <?php include('./config/queriesSql.php') ?>
+<?php 
+
+
+
+if($totalProjectsReviw && $readproyectsAnual <= 1){
+    $proyecto = 'proyecto';
+}else{
+    $proyecto = 'proyectos';
+}
+
+?>
 
 <section class="dashboardInitial">
     <div class="section-heroTitle">
@@ -21,6 +32,9 @@
                 <div class="SectionDateNum">  
                     <p> 
                         <?php echo $totalProjectsReviw?>
+                        <span>
+                            <?php echo $proyecto ?>
+                        </span>
                     </p>
                 </div>
                 <div class="sectionGraph">
@@ -41,6 +55,9 @@
                         <?php 
                             echo $readproyectsAnual;
                         ?>
+                        <span>
+                            <?php echo $proyecto ?>
+                        </span>
                     </p>
                 </div>
                 <div class="sectionGraph">
